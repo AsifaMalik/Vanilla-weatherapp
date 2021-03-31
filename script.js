@@ -1,0 +1,78 @@
+ let actualDate = new Date();
+function formatDate(actualDate) {
+  let hours = actualDate.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = actualDate.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ];
+  let day = days[actualDate.getDay()];
+  return `${day} ${hours}:${minutes}`;
+}
+let timeDate = document.querySelector("#currentTime");
+timeDate.innerHTML = formatDate(actualDate);
+
+function showWeather(response) {
+  document.querySelector(".currentTemp").innerHTML = Math.round(
+    response.data.main.temp
+  );
+
+  document.querySelector("#show-city").innerHTML = response.data.name;
+
+  document.querySelector(".weatherDescription").innerHTML =
+    response.data.weather[0].main;
+
+  document.querySelector(
+    "#detailHumidity"
+  ).innerHTML = `${response.data.main.humidity}%`;
+
+  document.querySelector("#detailWind").innerHTML = `${Math.round(
+    response.data.wind.speed
+  )} km/h`;
+}
+
+// 1. Make an API call to OpenWeather API
+// 2. Once I get HTTP repsonse, we display the city name and temperature
+
+function searchCity(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("#search-bar");
+  let mainCity = document.querySelector("#show-city");
+  mainCity.innerHTML = `${cityInput.value}`;
+  search(cityInput.value);
+}
+
+let formInput = document.querySelector("#searchingForm");
+formInput.addEventListener("submit", searchCity);
+function search(cities) {
+  let apiKey = "083f1c2f492b6f9e7ae05eb7c7f612e2";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cities}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showWeather);
+}
+
+function actualPosition(position) {
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let apiKey = "083f1c2f492b6f9e7ae05eb7c7f612e2";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showWeather);
+}
+
+function getPosition(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(actualPosition);
+}
+
+let currentCity = document.querySelector("#currentLocation");
+currentCity.addEventListener("click", getPosition);

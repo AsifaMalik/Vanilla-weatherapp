@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://kit.fontawesome.com/bb45a17de5.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+ 
+  <body>
+    <div class="container">
+        <div class="col-12">
+            <form id="searchingForm">
+                
+          <input  type="search" id="search-bar" placeholder="Enter City Name..." autofocus="on" />
+          <button class="search" type="submit" class="btn btn-light">Search </button>
+<button class="currentLocationButton" id="currentLocation">
+              Current 
+            </button>
+        </form>
+ </div>
+        </br>
+          <h1 class="cityName" id="show-city">MURCIA<i class="fas fa-map-marker-alt"></i></h1>
+           <div class="weatherDescription">mostly sunny</div>
+           <br>
+      <div class="row" class="suncloudimg">
+        <i class="fas fa-cloud-sun mainSymbol"></i>
+       </div>
+       <br>
+
+       <span class="currentTemp">24</span>°C
+          <br>
+        
+          <p>
+            <i class="fas fa-arrow-up"></i> 16°
+            <i class="fas fa-arrow-down"></i> 12°
+          </p>
+          <p class="card-text" id="currentTime"></p>
+          </div>
+          <br>
+       
+<div class="row row-cols-4">
+    
+    <div class="col border-right">
+        <div class="Days">
+Mon
+</div>
+<i class="fas fa-cloud-sun-rain"></i>
+<div class="row row-cols-2">
+<div class="degree">22°C</div>
+</div>
+</div>
+    <div class="col border-right">
+<div class="Days">
+        Tue
+        </div>
+<i class="fas fa-sun"></i>
+<div class="row row-cols-2">
+<div class="degree">25°C</div>
+</div>
+</div>
+<div class="col border-right">
+    <div class="Days">
+Wed
+</div>
+<i class="fas fa-cloud"></i>
+<div class="row row-cols-2">
+<div class="degree">20°C</div>
+</div>
+</div>
+<div class="col border-right">
+    <div class="Days"> 
+Thu
+</div>
+<i class="fas fa-cloud-rain"></i>
+<div class="row row-cols-2">
+<div class="degree">18°C</div>
+</div>
+</div>
+<div class="col border-left">
+  <div class="Days">
+Fre
+</div>  
+<i class="fas fa-cloud-sun"></i>
+<div class="row row-cols-2">
+<div class="degree">22°C</div>
+</div>
+</div>
+        </div>
+    </div>
+    <br>
+            <hr class="breakline" />
+            <div class=container> 
+    <div class="row">
+          <div class="col-2" id=wind>
+            windspeed 
+            <div class="details" id=detailWind >3,52ms</div> 
+         
+          </div>
+          <div class="col border-right"></div>
+          <div class="col-2">
+            sunrise
+            <br>
+             <div class="details">7.20 PM</div>
+       
+          </div>
+          <div class="col border-right"></div>
+          <div class="col-2">
+            sunset
+            
+             <div class="details">9.30 AM</div>
+            
+
+          </div>
+         <div class="col border-right"></div>
+          <div class="col-2" id=humidity>
+            humidity
+             <div class="details" id=detailHumidity>55%</div>
+              
+        </div>
+   </div>
+ 
+</div>
+      </div>
+      </div>
+
+      <br>
+      <h6> <a href="https://app.netlify.com/sites/distracted-aryabhata-2871a6/deploys" >  Open source code</a> Created by Asifa Malik <i class="far fa-registered"></i></h6>
+      
+    
+
+      <script src="script.js"></script>
+  </body>
+</html>
