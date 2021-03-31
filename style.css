@@ -37,8 +37,9 @@ input {
   padding: 4px;
 }
 
-.days {
+.Days {
   margin-top: 10px;
+  text-align: center;
 }
 .col-12 {
   margin: 0 auto;
@@ -102,6 +103,38 @@ input {
   margin-top: -10px;
 }
 
+
+
+.fa-cloud-sun-rain{
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+
+}
+
+.fa-sun{
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+
+.fa-cloud{
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+
+.fa-cloud-rain{
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+
+.fa-cloud-sun {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
 h6 {
   font-size: 8px;
   text-align: center;
