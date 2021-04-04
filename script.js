@@ -75,9 +75,6 @@ function getPosition(event) {
 }
 
 
-//let searchForm = document.querySelector("#search-bar");
-//searchbar.addeventListener("submit", searchCity);
-
 let currentCity = document.querySelector("#currentLocation");
 currentCity.addEventListener("click", getPosition);
 
