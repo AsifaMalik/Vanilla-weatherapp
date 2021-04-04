@@ -1,11 +1,11 @@
 body {
-background-color: #fff
-display: block;
-padding: 22px;
-width: 74%;
-margin: 67px auto;
-border-radius: 15px;
-box-shadow: 1px 5px 25px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  display: block;
+  padding: 22px;
+  width: 74%;
+  margin: 67px auto;
+  border-radius: 15px;
+  box-shadow: 1px 5px 25px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
@@ -29,9 +29,9 @@ input {
   text-align: center;
 }
 
-.overview{
+.overview {
   margin-bottom: 20px;
-   margin-top: 20px;
+  margin-top: 20px;
 }
 
 .placeholder {
@@ -109,26 +109,25 @@ input {
   margin-top: -10px;
 }
 
-.fa-cloud-sun-rain{
-  margin: 0 auto;
-  display: block;
-  text-align: center;
-
-}
-
-.fa-sun{
+.fa-cloud-sun-rain {
   margin: 0 auto;
   display: block;
   text-align: center;
 }
 
-.fa-cloud{
+.fa-sun {
   margin: 0 auto;
   display: block;
   text-align: center;
 }
 
-.fa-cloud-rain{
+.fa-cloud {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+
+.fa-cloud-rain {
   margin: 0 auto;
   display: block;
   text-align: center;
@@ -140,8 +139,8 @@ input {
   text-align: center;
 }
 
-.units{
-text-align: center;
+.units {
+  text-align: center;
 }
 h6 {
   font-size: 8px;
