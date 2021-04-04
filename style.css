@@ -142,6 +142,10 @@ input {
 .units {
   text-align: center;
 }
+
+.updateTime {
+  color: grey;
+}
 h6 {
   font-size: 8px;
   text-align: center;
