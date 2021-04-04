@@ -39,7 +39,7 @@ function showWeather(response) {
 
   document.querySelector("#detailWind").innerHTML = `${Math.round(
     response.data.wind.speed
-  )} km/h`;
+  )} Km/H`;
 }
 
 // 1. Make an API call to OpenWeather API
