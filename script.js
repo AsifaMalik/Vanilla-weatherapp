@@ -24,9 +24,11 @@ let timeDate = document.querySelector("#currentTime");
 timeDate.innerHTML = formatDate(actualDate);
 
 function showWeather(response) {
-  document.querySelector(".currentTemp").innerHTML = Math.round(
-    response.data.main.temp
-  );
+let iconElement = document.querySelector("#icon");
+iconElement.setAttribute("class", `http://openweathermap.org/img/wn/10d@2x.png`);
+
+
+  document.querySelector(".currentTemp").innerHTML = Math.round(response.data.main.temp);
 
   document.querySelector("#show-city").innerHTML = response.data.name;
 
