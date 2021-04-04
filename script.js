@@ -27,7 +27,6 @@ function showWeather(response) {
 //let iconElement = document.querySelector("#icon");
 //iconElement.setAttribute("class", `http://openweathermap.org/img/wn/10d@2x.png`);
 
-
   document.querySelector(".currentTemp").innerHTML = Math.round(response.data.main.temp);
 
   document.querySelector("#show-city").innerHTML = response.data.name;
@@ -42,6 +41,7 @@ function showWeather(response) {
   document.querySelector("#detailWind").innerHTML = `${Math.round(
     response.data.wind.speed
   )} Km/H`;
+
 }
 
 // 1. Make an API call to OpenWeather API
