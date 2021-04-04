@@ -55,9 +55,9 @@ function searchCity(event) {
 
 let formInput = document.querySelector("#searchingForm");
 formInput.addEventListener("submit", searchCity);
-function search(cities) {
+function search(city) {
   let apiKey = "083f1c2f492b6f9e7ae05eb7c7f612e2";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cities}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showWeather);
 }
 
@@ -74,5 +74,11 @@ function getPosition(event) {
   navigator.geolocation.getCurrentPosition(actualPosition);
 }
 
+
+//let searchForm = document.querySelector("#search-bar");
+//searchbar.addeventListener("submit", searchCity);
+
 let currentCity = document.querySelector("#currentLocation");
 currentCity.addEventListener("click", getPosition);
+
+search("Oslo");
