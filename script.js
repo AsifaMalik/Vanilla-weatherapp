@@ -41,7 +41,7 @@ humidityElement.innerHTML = `${response.data.main.humidity}%`;
 windElement.innerHTML = `${Math.round(response.data.wind.speed)} Km/H`;
 dateElement.innerHTML = formatDate(response.data.dt * 1000);
 iconElement.setAttribute("class", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-
+iconElement.setAttribute("alt", response.data.weather[0].description);
 
 }
 
@@ -64,21 +64,21 @@ function search(city) {
   axios.get(apiUrl).then(showWeather);
 }
 
-function actualPosition(position) {
-  let lat = position.coords.latitude;
-  let lon = position.coords.longitude;
-  let apiKey = "083f1c2f492b6f9e7ae05eb7c7f612e2";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(showWeather);
-}
+//function actualPosition(position) {
+ // let lat = position.coords.latitude;
+  //let lon = position.coords.longitude;
+  //let apiKey = "083f1c2f492b6f9e7ae05eb7c7f612e2";
+  //let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+  //axios.get(apiUrl).then(showWeather);
+//}
 
-function getPosition(event) {
-  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(actualPosition);
-}
+//function getPosition(event) {
+//  event.preventDefault();
+  //navigator.geolocation.getCurrentPosition(actualPosition);
+//}
 
 
-let currentCity = document.querySelector("#currentLocation");
-currentCity.addEventListener("click", getPosition);
+//let currentCity = document.querySelector("#currentLocation");
+//currentCity.addEventListener("click", getPosition);
 
 search("Oslo");
