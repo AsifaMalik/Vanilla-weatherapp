@@ -35,7 +35,7 @@ let iconElement = document.querySelector("#icon");
 
 
 cityElement.innerHTML = response.data.name;
-temperatureElement.innerHTML = Math.round(response.data.main.temp);
+temperatureElement.innerHTML = `${Math.round(response.data.main.temp)}°` ;
 descriptionElement.innerHTML = response.data.weather[0].description;
 humidityElement.innerHTML = `${response.data.main.humidity}%`;
 windElement.innerHTML = `${Math.round(response.data.wind.speed)} Km/H`;
