@@ -61,6 +61,12 @@ input {
   margin-top: -10px;
   font-weight: lighter;
 }
+
+.icon {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
 .currentTemp {
   font-size: 100px;
   margin-top: -10px;

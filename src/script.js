@@ -40,7 +40,7 @@ descriptionElement.innerHTML = response.data.weather[0].description;
 humidityElement.innerHTML = `${response.data.main.humidity}%`;
 windElement.innerHTML = `${Math.round(response.data.wind.speed)} Km/H`;
 dateElement.innerHTML = formatDate(response.data.dt * 1000);
-iconElement.setAttribute("class", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 iconElement.setAttribute("alt", response.data.weather[0].description);
 
 }
