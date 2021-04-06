@@ -59,7 +59,7 @@ input {
   font-size: 20px;
   color: #cc572d;
   margin-top: -10px;
-  font-weight: normal;
+  font-weight: lighter;
 }
 .currentTemp {
   font-size: 100px;
