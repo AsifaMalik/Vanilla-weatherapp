@@ -24,7 +24,6 @@ let timeDate = document.querySelector("#currentTime");
 timeDate.innerHTML = formatDate(actualDate);
 
 function showWeather(response) {
-iconElement.setAttribute("class", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 
 let cityElement =  document.querySelector("#show-city");
 let temperatureElement = document.querySelector(".currentTemp");
