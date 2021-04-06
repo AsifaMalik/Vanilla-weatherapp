@@ -24,24 +24,26 @@ let timeDate = document.querySelector("#currentTime");
 timeDate.innerHTML = formatDate(actualDate);
 
 function showWeather(response) {
-let iconElement = document.querySelector("#icon");
 iconElement.setAttribute("class", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 
+let cityElement =  document.querySelector("#show-city");
+let temperatureElement = document.querySelector(".currentTemp");
+let descriptionElement = document.querySelector(".weatherDescription");
+let humidityElement = document.querySelector("#detailHumidity");
+let windElement = document.querySelector("#detailWind");
+let dateElement = document.querySelector("#currentTime");
+let iconElement = document.querySelector("#icon");
 
-  document.querySelector(".currentTemp").innerHTML = Math.round(response.data.main.temp);
 
-  document.querySelector("#show-city").innerHTML = response.data.name;
+cityElement.innerHTML = response.data.name;
+temperatureElement.innerHTML = Math.round(response.data.main.temp);
+descriptionElement.innerHTML = response.data.weather[0].description;
+humidityElement.innerHTML = `${response.data.main.humidity}%`;
+windElement.innerHTML = `${Math.round(response.data.wind.speed)} Km/H`;
+dateElement.innerHTML = formatDate(response.data.dt * 1000);
+iconElement.setAttribute("class", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+iconElement.setAttribute("alt", response.data.weather[0].description);
 
-  document.querySelector(".weatherDescription").innerHTML =
-    response.data.weather[0].main;
-
-  document.querySelector(
-    "#detailHumidity"
-  ).innerHTML = `${response.data.main.humidity}%`;
-
-  document.querySelector("#detailWind").innerHTML = `${Math.round(
-    response.data.wind.speed
-  )} Km/H`;
 
 }
 
