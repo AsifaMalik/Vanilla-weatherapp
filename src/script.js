@@ -83,4 +83,4 @@ function search(city) {
 //let currentCity = document.querySelector("#currentLocation");
 //currentCity.addEventListener("click", getPosition);
 
-search("Oslo");
+search("Murcia");
