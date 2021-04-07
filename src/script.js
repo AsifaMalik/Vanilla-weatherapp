@@ -82,5 +82,17 @@ function search(city) {
 
 //let currentCity = document.querySelector("#currentLocation");
 //currentCity.addEventListener("click", getPosition);
+function displayFahrenheitTemperature(event){
+  event.preventDefault();
+  let fahrenheiTemperature =(14 * 9) / 5 + 32;
+  alert("fahrenheiTemperature");
+    let temperatureElement = document.querySelector ("#currentTemp");
+     temperatureElement.innerHTMl = fahrenheitTemperature;
+}
+
 
 search("Murcia");
+
+
+let fahrenheitLink= document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);

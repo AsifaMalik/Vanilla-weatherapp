@@ -29,6 +29,12 @@ input {
   text-align: center;
 }
 
+.cityName {
+  margin-left: -10px;
+}
+.iconHere {
+  margin-right: -10px;
+}
 .overview {
   margin-bottom: 20px;
   margin-top: 20px;
@@ -70,6 +76,7 @@ input {
 .currentTemp {
   font-size: 100px;
   margin-top: -10px;
+  margin-left: -10px;
   font-weight: lighter;
 }
 
