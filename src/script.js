@@ -1,5 +1,6 @@
- let actualDate = new Date();
-function formatDate(actualDate) {
+
+function formatDate(timestamp) {
+  let actualDate = new Date (timestamp);
   let hours = actualDate.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -15,11 +16,12 @@ function formatDate(actualDate) {
     "Wednesday",
     "Thursday",
     "Friday",
-    "Saturday"
+    "Saturday",
   ];
   let day = days[actualDate.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
+let actualDate = new Date();
 let timeDate = document.querySelector("#currentTime");
 timeDate.innerHTML = formatDate(actualDate);
 
