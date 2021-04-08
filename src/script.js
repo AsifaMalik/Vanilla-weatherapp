@@ -26,7 +26,6 @@ let timeDate = document.querySelector("#currentTime");
 timeDate.innerHTML = formatDate(actualDate);
 
 function showWeather(response) {
-
 let cityElement =  document.querySelector("#show-city");
 let temperatureElement = document.querySelector(".currentTemp");
 let descriptionElement = document.querySelector(".weatherDescription");
@@ -35,7 +34,7 @@ let windElement = document.querySelector("#detailWind");
 let dateElement = document.querySelector("#currentTime");
 let iconElement = document.querySelector("#icon");
 
-
+celsiusTemperature = response.data.main.temp;
 cityElement.innerHTML = response.data.name ;
 temperatureElement.innerHTML = `${Math.round(response.data.main.temp)}°` ;
 descriptionElement.innerHTML = response.data.weather[0].description;
@@ -83,13 +82,31 @@ function search(city) {
 //let currentCity = document.querySelector("#currentLocation");
 //currentCity.addEventListener("click", getPosition);
 function displayFahrenheitTemperature(event){
-  event.preventDefault();
-  let fahrenheitTemperature =(14 * 9) / 5 + 32;
-    let temperatureElement = document.querySelector ("#currentTemp");
-     temperatureElement.innerHTMl = Math.round(fahrenheitTemperature);
+event.preventDefault();
+let temperatureElement = document.querySelector (".currentTemp");
+celsiusLink.classList.remove("active");
+fahrenheitLink.classList.add("active");
+
+let fahrenheitTemperature =(celsiusTemperature * 9) / 5 + 32;
+temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
-search("Murcia");
+function displayCelsiusTemperature(event) {
+event.preventDefault();
+celsiusLink.classList.add("active");
+fahrenheitLink.classList.remove("active");
+let temperatureElement = document.querySelector (".currentTemp");
+temperatureElement.innerHTML = Math.round(celsiusTemperature);
+
+}
+
+
+let celsiusTemperature = null;
 
 let fahrenheitLink= document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink= document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+search("Murcia");
