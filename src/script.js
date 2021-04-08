@@ -26,6 +26,7 @@ let timeDate = document.querySelector("#currentTime");
 timeDate.innerHTML = formatDate(actualDate);
 
 function showWeather(response) {
+  console.log(response);
 let cityElement =  document.querySelector("#show-city");
 let temperatureElement = document.querySelector(".currentTemp");
 let descriptionElement = document.querySelector(".weatherDescription");
@@ -33,6 +34,11 @@ let humidityElement = document.querySelector("#detailHumidity");
 let windElement = document.querySelector("#detailWind");
 let dateElement = document.querySelector("#currentTime");
 let iconElement = document.querySelector("#icon");
+let tempMax = document.querySelector("#tempMax");
+let tempMin = document.querySelector("#tempMin");
+
+tempMax.innerHTML = response.data.main.temp_max;
+tempMin.innerHTML = response.data.main.temp_min;
 
 celsiusTemperature = response.data.main.temp;
 cityElement.innerHTML = response.data.name ;
