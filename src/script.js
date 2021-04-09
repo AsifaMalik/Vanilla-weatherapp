@@ -37,8 +37,8 @@ let iconElement = document.querySelector("#icon");
 let tempMax = document.querySelector("#tempMax");
 let tempMin = document.querySelector("#tempMin");
 
-tempMax.innerHTML = response.data.main.temp_max;
-tempMin.innerHTML = response.data.main.temp_min;
+tempMax.innerHTML = `${Math.round(response.data.main.temp_max)} ⇡`;
+tempMin.innerHTML = `${Math.round(response.data.main.temp_min)} ⇣`;
 
 celsiusTemperature = response.data.main.temp;
 cityElement.innerHTML = response.data.name ;
@@ -116,3 +116,5 @@ let celsiusLink= document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("Murcia");
+
+
