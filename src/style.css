@@ -125,16 +125,13 @@ input {
   color: grey;
   font-family: "Source Code Pro", monospace;
   margin-top: -10px;
-  margin: 0 auto;
-  display: block;
 }
 .weather-forecast-temperature-min {
   text-align: center;
   color: grey;
   font-family: "Source Code Pro", monospace;
   margin-top: -10px;
-  margin: 0 auto;
-  display: block;
+  opacity: 0.5;
 }
 
 .units {
