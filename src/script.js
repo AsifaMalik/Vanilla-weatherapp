@@ -25,8 +25,32 @@ let actualDate = new Date();
 let timeDate = document.querySelector("#currentTime");
 timeDate.innerHTML = formatDate(actualDate);
 
+function displayForecast(){
+  let forecastElement = document.querySelector("#forecast");
+let forecastHTML= `<div class="row row-cols-5">` ;
+let days= ["Mon","Tue","Wed","Thu","Fri"];
+days.forEach(function(day){
+
+forecastHTML = forecastHTML + `
+<div class="col border-right">
+<div class="weather-forecast-day">${day}</div>
+<img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="Clear" class="icon" id= "icon" width=25px>
+<div class="weather-forecast-temperature">
+<span class="weather-forecast-temperature-max">
+22°
+</span>
+<span class="weather-forecast-temperature-min">
+18°
+</span>
+</div>
+</div>`;
+});
+forecastHTML = forecastHTML + `</div>`;
+forecastElement.innerHTML = forecastHTML;
+console.log(forecastElement);
+}
+
 function showWeather(response) {
-  console.log(response);
 let cityElement =  document.querySelector("#show-city");
 let temperatureElement = document.querySelector(".currentTemp");
 let descriptionElement = document.querySelector(".weatherDescription");
@@ -39,7 +63,6 @@ let tempMin = document.querySelector("#tempMin");
 
 tempMax.innerHTML = `${Math.round(response.data.main.temp_max)} ⇡`;
 tempMin.innerHTML = `${Math.round(response.data.main.temp_min)} ⇣`;
-
 celsiusTemperature = response.data.main.temp;
 cityElement.innerHTML = response.data.name ;
 temperatureElement.innerHTML = `${Math.round(response.data.main.temp)}°` ;
@@ -50,10 +73,15 @@ dateElement.innerHTML = formatDate(response.data.dt * 1000);
 iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 iconElement.setAttribute("alt", response.data.weather[0].description);
 
+
 }
+
+
 
 // 1. Make an API call to OpenWeather API
 // 2. Once I get HTTP repsonse, we display the city name and temperature
+
+
 
 function searchCity(event) {
   event.preventDefault();
@@ -106,7 +134,6 @@ temperatureElement.innerHTML = Math.round(celsiusTemperature);
 
 }
 
-
 let celsiusTemperature = null;
 
 let fahrenheitLink= document.querySelector("#fahrenheit-link");
@@ -116,5 +143,5 @@ let celsiusLink= document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("Murcia");
-
+displayForecast();
 
