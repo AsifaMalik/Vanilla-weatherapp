@@ -25,7 +25,8 @@ let actualDate = new Date();
 let timeDate = document.querySelector("#currentTime");
 timeDate.innerHTML = formatDate(actualDate);
 
-function displayForecast(){
+function displayForecast(response){
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
 let forecastHTML= `<div class="row row-cols-5">` ;
 let days= ["Mon","Tue","Wed","Thu","Fri"];
@@ -47,7 +48,13 @@ forecastHTML = forecastHTML + `
 });
 forecastHTML = forecastHTML + `</div>`;
 forecastElement.innerHTML = forecastHTML;
-console.log(forecastElement);
+}
+function getForecast(coordinates){
+
+  let apiKey = "083f1c2f492b6f9e7ae05eb7c7f612e2";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&untits=metric`;
+console.log(apiUrl);
+axios.get(apiUrl).then(displayForecast);
 }
 
 function showWeather(response) {
@@ -73,13 +80,14 @@ dateElement.innerHTML = formatDate(response.data.dt * 1000);
 iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 iconElement.setAttribute("alt", response.data.weather[0].description);
 
-
+getForecast(response.data.coord);
 }
 
 
 
 // 1. Make an API call to OpenWeather API
 // 2. Once I get HTTP repsonse, we display the city name and temperature
+
 
 
 
@@ -143,5 +151,7 @@ let celsiusLink= document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("Murcia");
-displayForecast();
+
+
+
 
