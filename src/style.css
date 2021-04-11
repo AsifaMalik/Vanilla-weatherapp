@@ -133,7 +133,10 @@ input {
   margin-top: -10px;
   opacity: 0.5;
 }
-
+.smallImg {
+  margin: 0 auto;
+  display: block;
+}
 .units {
   text-align: center;
 }
