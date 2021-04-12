@@ -42,7 +42,7 @@ forecast.forEach(function (forecastDay, index){
 if (index < 5) {
 forecastHTML = 
 forecastHTML + `
-<div class="col border-right">
+<div class="col ${index < 4 && "border-right"}">
 <div class="weather-forecast-day">${formatDay(forecastDay.dt)}</div>
 <img 
 src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
