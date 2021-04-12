@@ -1,11 +1,11 @@
 body {
   background-color: #fff;
   display: block;
-  padding: 22px;
-  width: 74%;
+  padding: 20px;
+  width: 65%;
   margin: 67px auto;
   border-radius: 15px;
-  box-shadow: 1px 5px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 6px 13px rgb(0 0 0 / 10%);
 }
 
 h1 {
@@ -29,6 +29,9 @@ input {
   text-align: center;
 }
 
+.html {
+  scroll-behavior: smooth;
+}
 .cityName {
   margin-left: -10px;
 }
@@ -140,17 +143,18 @@ input {
   text-align: center;
 }
 .tempUnit {
-  color: #cc572d;
+  color: grey;
 }
 .tempUnit:hover {
   font-weight: bold;
-  color: grey;
+  color: #cc572d;
   cursor: pointer;
   text-decoration: none;
 }
 
 .updateTime {
-  color: grey;
+  color: black;
+  opacity: 0.7;
 }
 
 h6 {
