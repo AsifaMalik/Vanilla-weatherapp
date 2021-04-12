@@ -25,7 +25,20 @@ input {
   border-style: groove;
   text-align: center;
 }
-
+.search {
+  border-radius: 10px;
+  padding: 0 15px;
+  margin: 0;
+  height: 35px;
+  font-size: 17px;
+  border: #66a4ad;
+  display: inline;
+}
+.search:hover {
+  background: #fdf1e5;
+  color: black;
+  border: none;
+}
 .weather-app {
   background-color: #fff;
   padding: 20px;
@@ -185,4 +198,13 @@ h6 {
   margin-top: -10px;
 
   font-family: "Source Code Pro", monospace;
+}
+.circle {
+  height: 150px;
+  border-radius: 50%;
+  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+  border: 1px solid #fdf1e5;
+  width: 150px;
+  padding: 20px;
+  margin: 20px auto 0;
 }

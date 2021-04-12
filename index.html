@@ -27,6 +27,7 @@
             <input
               type="search"
               id="search-bar"
+              class="search-bar"
               placeholder="Type a city..."
               autofocus="on"
               autocomplete="off"
@@ -50,12 +51,14 @@
           <div class="weatherDescription"></div>
           <br />
           <div class="row">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-              alt="Clear"
-              class="icon"
-              id="icon"
-            />
+            <div class="circle">
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                alt="Clear"
+                class="icon"
+                id="icon"
+              />
+            </div>
           </div>
           <div
             class="d-flex justify-content-center weather-temperature"
