@@ -167,5 +167,3 @@ celsiusLink.addEventListener("click", displayCelsiusTemperature);
 search("Murcia");
 
 
-
-
