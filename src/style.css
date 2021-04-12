@@ -39,7 +39,6 @@ input {
   margin-bottom: 20px;
   margin-top: 20px;
 }
-
 .weather-temperature .active {
   color: black;
   cursor: default;
@@ -139,6 +138,15 @@ input {
 }
 .units {
   text-align: center;
+}
+.tempUnit {
+  color: #cc572d;
+}
+.tempUnit:hover {
+  font-weight: bold;
+  color: grey;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .updateTime {
