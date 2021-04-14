@@ -30,6 +30,11 @@ input {
   text-align: center;
 }
 
+.search-bar {
+  display: block;
+  margin: 0 auto;
+}
+
 .search {
   border-radius: 10px;
   padding: 0 15px;
@@ -38,15 +43,11 @@ input {
   font-size: 17px;
   border: #66a4ad;
   display: inline;
-  margin-right: -64px;
 }
 .search:hover {
   background: #fdf1e5;
   color: black;
   border: none;
-}
-.search-bar {
-  margin-right: 18px;
 }
 
 .weather-app {
@@ -57,11 +58,16 @@ input {
   backdrop-filter: blur(5px);
 }
 
+.search-bar {
+  display: block;
+  margin: 0 auto;
+}
+
 .html {
   scroll-behavior: smooth;
 }
 .cityName {
-  margin-left: -39px;
+  text-align: center;
 }
 .iconHere {
   margin-right: -10px;
@@ -97,8 +103,7 @@ input {
 .weatherDescription {
   font-size: 20px;
   color: #cc572d;
-  margin-top: -10px;
-  margin-left: -54px;
+  text-align: center;
   font-weight: lighter;
   opacity: 0.8;
 }
@@ -112,9 +117,8 @@ input {
 }
 .currentTemp {
   font-size: 100px;
-  margin-top: -10px;
-  margin-left: -29px;
   font-weight: lighter;
+  text-align: center;
 }
 
 .container {
@@ -158,7 +162,6 @@ input {
   text-align: center;
   color: grey;
   font-family: "Source Code Pro", monospace;
-  margin-top: -10px;
 }
 .weather-forecast-temperature-min {
   text-align: center;
@@ -174,7 +177,6 @@ input {
 .units {
   text-align: center;
   margin-top: 34px;
-  margin-left: -2px;
 }
 .tempUnit {
   color: grey;
@@ -190,22 +192,9 @@ input {
   color: black;
   opacity: 0.4;
   margin-left: 2px;
-  margin-top: -23px;
   font-size: 14px;
 }
 
-.row {
-  margin-right: 19px;
-  margin-left: -15px;
-}
-h6 {
-  font-size: 12px;
-  text-align: center;
-  color: grey;
-  margin-top: -10px;
-
-  font-family: "Source Code Pro", monospace;
-}
 .circle {
   height: 150px;
   border-radius: 50%;
@@ -214,8 +203,7 @@ h6 {
   width: 150px;
   padding: 23px;
   margin: 20px auto 0;
-  margin-right: 320px;
-  margin-top: -10px;
+  display: block;
 }
 
 .fa-map-marker-alt {
@@ -246,4 +234,11 @@ h6 {
   display: block;
   color: grey;
   opacity: 0.8;
+}
+
+h6 {
+  font-size: 12px;
+  text-align: center;
+  color: grey;
+  font-family: "Source Code Pro", monospace;
 }
