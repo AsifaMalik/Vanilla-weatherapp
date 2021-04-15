@@ -30,17 +30,13 @@ input {
   text-align: center;
 }
 
-.search-bar {
-  display: block;
-  margin: 0 auto;
-}
-
 .search {
-  border-radius: 10px;
-  padding: 0 15px;
+  border-radius: 30px;
+  padding: 0 11px;
   margin: 0;
-  height: 35px;
-  font-size: 17px;
+  height: 33px;
+  font-size: 15px;
+  font-family: "Source Code Pro", monospace;
   border: #66a4ad;
   display: inline;
   margin-left: -2px;
