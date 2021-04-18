@@ -1,7 +1,7 @@
 body {
   background-color: #fff;
   display: block;
-  width: 65%;
+  width: 90%;
   margin: 67px auto;
   background-color: #ffffff;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3Cpath fill='none' stroke-width='1' stroke-opacity='0.12' id='a' d='M0.74-509.63l485.39 352.65l-185.4 570.61h-599.97l-185.4-570.61L0.74-509.63 M0.74-510.87l-486.56 353.51l185.85 571.99h601.42L487.3-157.36L0.74-510.87L0.74-510.87z'/%3E%3C/defs%3E%3Cg style='transform-origin:center'%3E%3Cg transform='' style='transform-origin:center'%3E%3Cg transform='rotate(-116.8 0 0)' style='transform-origin:center'%3E%3Cg transform='translate(1000 750)'%3E%3Cuse stroke='%23fffcfa' href='%23a' transform='rotate(7.3 0 0) scale(1.073)'/%3E%3Cuse stroke='%23fff5ed' href='%23a' transform='rotate(14.6 0 0) scale(1.146)'/%3E%3Cuse stroke='%23ffefe1' href='%23a' transform='rotate(21.9 0 0) scale(1.219)'/%3E%3Cuse stroke='%23ffe8d4' href='%23a' transform='rotate(29.2 0 0) scale(1.292)'/%3E%3Cuse stroke='%23ffe2c8' href='%23a' transform='rotate(36.5 0 0) scale(1.365)'/%3E%3Cuse stroke='%23ffdcbc' href='%23a' transform='rotate(43.8 0 0) scale(1.438)'/%3E%3Cuse stroke='%23ffd5b0' href='%23a' transform='rotate(51.1 0 0) scale(1.511)'/%3E%3Cuse stroke='%23ffcfa3' href='%23a' transform='rotate(58.4 0 0) scale(1.584)'/%3E%3Cuse stroke='%23ffc897' href='%23a' transform='rotate(65.7 0 0) scale(1.657)'/%3E%3Cuse stroke='%23ffc28b' href='%23a' transform='rotate(73 0 0) scale(1.73)'/%3E%3Cuse stroke='%23ffbc7f' href='%23a' transform='rotate(80.3 0 0) scale(1.803)'/%3E%3Cuse stroke='%23ffb573' href='%23a' transform='rotate(87.6 0 0) scale(1.876)'/%3E%3Cuse stroke='%23ffaf66' href='%23a' transform='rotate(94.9 0 0) scale(1.949)'/%3E%3Cuse stroke='%23ffa95a' href='%23a' transform='rotate(102.2 0 0) scale(2.022)'/%3E%3Cuse stroke='%23ffa24d' href='%23a' transform='rotate(109.5 0 0) scale(2.095)'/%3E%3Cuse stroke='%23ff9c40' href='%23a' transform='rotate(116.8 0 0) scale(2.168)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
@@ -39,7 +39,6 @@ input {
   font-family: "Source Code Pro", monospace;
   border: #66a4ad;
   display: inline;
-  margin-left: -2px;
 }
 .search:hover {
   background: #fdf1e5;
@@ -53,12 +52,6 @@ input {
   border-radius: 15px;
   box-shadow: 2px 6px 13px rgb(0 0 0 / 5%);
   backdrop-filter: blur(5px);
-}
-
-.search-bar {
-  display: block;
-  margin: 0 auto;
-  margin-right: -10px;
 }
 
 .html {
@@ -239,4 +232,9 @@ h6 {
   text-align: center;
   color: grey;
   font-family: "Source Code Pro", monospace;
+}
+@media (min-width: 768px) {
+  body {
+    width: 60%;
+  }
 }
